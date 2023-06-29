@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Serif+JP:wght@900&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+	
+}
+/* style.css */
+
+/* カートのテーブル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* テーブルのヘッダー */
+table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+/* テーブルの行 */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* テーブルのセル */
+table td {
+  padding: 8px;
+}
+
+/* 確認ボタン */
+input[type="submit"] {
+  background-color: #000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* カートが空の場合のメッセージ */
+p.empty-cart-message {
+  color: #888888;
+}
+
+/* リンク */
+a {
+  color: #0000FF;
+}
+
+.top1 {
+    display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: darkgrey;
+  align-items: center;
+    }
+.top1 form {
+        margin-left: 850px;
+    }
+
+.top1 button {
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-left:30px;
+    }
+
+#footer{
+  background:#333;
+  color:#fff;
+  padding:40px;
+  text-align:center;
+}
+
+#footer a{
+  color: #fff;
+}

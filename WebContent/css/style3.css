@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Serif+JP:wght@900&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+	
+}
+
+/*---------------top画面------------------------------------------*/
+button{
+color: #fff;
+background-color: #000000;
+border: none;
+border-radius: 3px;
+}
+
+section{
+	font-size: 18px;
+}
+
+header{
+  padding: 1px;
+  background:#888;
+}
+
+.box{
+    color: #fff;
+    padding: 20px 30px 20px 30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#box1{
+	color:#000;
+	background-size: cover;
+    background-image: url(../img/集合.jpg);
+    background-color:rgba(255,255,255, 0.7);
+    background-blend-mode: overlay;
+}
+#box2{
+	color:#fff;
+	background-size: cover;
+    background-image: url(../img/風景１.jpg);
+    background-color:rgba(0,0,0, 0.7);
+    background-blend-mode: overlay;
+}
+
+#box3{color:#000;
+    background-image: url(../img/ショッピング.jpg);
+    background-color:rgba(255,255,255, 0.7);
+    background-blend-mode: overlay;
+}
+#box4{
+    color:#fff;
+	background-size: cover;
+    background-image: url(../img/店内.jpg);
+    background-color:rgba(0,0,0, 0.7);
+    background-blend-mode: overlay;
+}
+
+
+#footer{
+  background:#333;
+  color:#fff;
+  padding:40px;
+  text-align:center;
+}
+
+#footer a{
+  color: #fff;
+}
+/*========= ページネーションCSS ===============*/
+
+.pagination {
+  position:fixed;
+  right:20px;
+  top: 50%;
+    transform: translateY(-50%);
+  font-size:1em;
+  z-index: 10;
+  list-style: none;
+}
+
+.pagination a {
+  display:block;
+  height:20px;
+  margin-bottom:5px;
+  color:#fff;
+  position:relative;
+  padding:4px;
+}
+
+.pagination a.active:after {
+  box-shadow:inset 0 0 0 5px;
+}
+
+/*現在地表示のテキストの設定*/
+.pagination a .hover-text {
+  position:absolute;
+  right:15px;
+  top:0;
+  opacity:0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+  opacity: 1;
+}
+
+.pagination a:after {
+  -webkit-transition:box-shadow 0.5s ease;
+  transition:box-shadow 0.5s ease;
+  width:10px;
+  height:10px;
+  display: block;
+  border:1px solid;
+  border-radius:50%;
+  content:"";
+  position: absolute;
+  margin:auto;
+  top:0;
+  right:3px;
+  bottom:0;
+}
+
+/*768px以下は現在地表示のテキストを非表示*/
+@media screen and (max-width:768px) { 
+  .pagination a .hover-text{
+    display: none;
+  } 
+}
+/*========= ナビゲーションメニューのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+  top:-120%;
+    left:0;
+  width:100%;
+    height: 100vh;/*ナビの高さ*/
+  background:#999;
+    /*動き*/
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    top: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+  list-style: none;
+    text-align: center; 
+}
+
+#g-nav li a{
+  color: #333;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+  top:10px;
+  right: 10px;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+  
+/*×に変化*/  
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background-color: #666;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*スライド*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+   width:94%;
+   height: 400px;
+    margin:0 auto;
+}
+
+.slider img {
+    width:250px;/*スライダー内の画像を横幅100%に*/
+    height:250px;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}

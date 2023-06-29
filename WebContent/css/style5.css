@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Serif+JP:wght@900&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+	
+}
+body {
+    background-color: #f1f1f1;
+}
+
+.top1 {
+    display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: darkgrey;
+  align-items: center;
+    }
+.top1 form {
+        margin-left: 850px;
+    }
+
+.top1 button {
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-left:30px;
+    }
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: normal;
+}
+
+td input[type="text"],
+td input[type="number"] {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+td input[type="text"] {
+    font-weight: bold;
+}
+
+td input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+td input[type="text"]:read-only,
+td input[type="number"]:read-only {
+    background-color: #f9f9f9;
+}
+
+td:last-child {
+    font-weight: bold;
+}
+
+p {
+	text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #000;
+}
+
+.form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#footer{
+  background:#333;
+  color:#fff;
+  padding:40px;
+  text-align:center;
+}
+
+#footer a{
+  color: #fff;
+}

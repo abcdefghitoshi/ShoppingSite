@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Serif+JP:wght@900&display=swap');
+*{
+	font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+	
+}
+.itemform{
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+margin:0;
+padding:0;
+scroll-padding-top: 2rem;
+scroll-behavior: smooth;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+}
+
+/*-------------商品一覧-------------*/
+
+#footer{
+  background:#333;
+  color:#fff;
+  padding:40px;
+  text-align:center;
+}
+
+#footer a{
+  color: #fff;
+}
+
+
+ body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+    }
+
+    .itemform {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .top1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        background-color: #888;
+    }
+
+    h2 a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .top1 form {
+        margin: 0;
+    }
+
+    .top1 button {
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-left:800px;
+    }
+
+    .top1 img {
+        width: 80%;
+        height: 100%;
+        margin-left: 10px;
+        cursor: pointer;
+        padding-left: 0%;
+    }
+
+    .top {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .error-message {
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    input[type="search"] {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    article {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .item {
+        text-align: center;
+    }
+
+    .img_item {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .frame1,
+    .frame2,
+    .number {
+        padding: 5px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+.number {
+        width: 45px;
+    }
